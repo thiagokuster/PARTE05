@@ -1,0 +1,198 @@
+body{
+    font-family: Arial, sans-serif;
+    background-image: url('brasao.jpg');
+    background-size: cover;
+}
+.container{
+    border-radius: 10px;
+    background-color: #fdd9f8;
+    margin-left: 400px;
+    padding: 20px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.caixa{
+    width: 100%;
+    display:flex;
+    align-items: center; 
+    padding: 10px;
+    border-radius: 5px;
+}
+.azul{
+    background-color: #3498db;
+    color: white;
+}
+#barrapesquisar{
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    padding:10px;
+    font-size: 20px;
+}
+.list{
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.list th,.list td{
+    padding: 10px;
+    text-align: left;
+}
+.list th{
+    background-color: #3498db;
+    color: white;
+}
+.list tr:nth-child(even){
+    background-color: #ffffff;
+}
+.pagination{
+    text-align: center;
+    margin-top: 20px;
+}
+#previousPage,#nextPage{
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.modal-container{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.modal{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+.button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #3498db;
+}
+form{
+    margin-top: 20px;
+}
+label{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+input[type="text"],textarea{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[type="radio"]{
+    margin-right: 5px;
+}
+.logo{
+    max-width: 100%;
+    height: auto;
+}
+.edit-btn,.delete-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #3498db;
+    margin-right: 5px;
+}
+#campoInfoSigilosa{
+    display: none;
+}
+.list tr.selected{
+    background-color: #f0e68c;
+}
+#previousPage:hover,#nextPage:hover{
+    background-color: #3498db;
+}
+#previousPage:disabled,#nextPage:disabled{
+    background-color: #ccc;
+    color: #999;
+    cursor: not-allowed;
+}
+.active{
+    display: flex;
+}
+.active .modal{
+    animation: modal .5s;
+}
+h1{
+    text-align: center;
+}
+.header #new{
+    background-color: rgb(36, 54, 251);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+h2{
+    text-align: center;
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+}
+.logo{
+    display: block;
+    margin:20px auto;
+    max-width: 200px 
+}
+img{
+max-width: 25%;
+height: auto;
+}
+@media (min-width: 768px){
+    .container {
+        width: 70%; 
+    }
+}
+a{
+    font-size: 2rem;
+    color:#3498db;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-left: 95%;
+}
+input[type="submit"]{   
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.list td{
+    max-width: 100px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTES</title>
+    <link rel="stylesheet" href="PARTE05.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div id="caixa_pesquisar" class="caixa azul">
+                <button onclick="openmodal()" id="new">+<i></i></button>
+                <input type="text" id="barrapesquisar" placeholder="Pesquisar..."/>
+            </div>
+        </div>
+        <h1>Catálago de Sistemas</h1>
+    <div class="divtable">
+        <table class="list" id="employeeList">
+            <thead> 
+                    <tr>
+                        <th id="1">Nome do Software</th>
+                        <th id="2">Versão</th>
+                        <th id="3">Finalidade</th>
+                        <th id="4">Principais Informações</th>
+                        <th id="5">Funcionalidades</th>
+                        <th id="6">Acessa via Web?</th>
+                        <th id="7">Possui Informação Sigilosa?</th>
+                        <th id="8">Qual Informação Sigilosa?</th>
+                        <th id="9"> </th>
+                        <th id="10"> </th>
+                    </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="box"></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    
+<div class="pagination">
+<button id="previousPage">Anterior</button><span id="currentPage">Página 1 de 1</span><button id="nextPage">Próximo</button>
+</div>
+
+<div class="modal-container">
+    <div class="modal">
+        <h2>Catálago de Sistemas</h2>
+        <a href="CdS.html" class="button">x</a>
+        <img src="brasao.jpg" alt="brasao" class="logo">
+        <form>
+            <label for="nome">Nome do Software:</label>
+            <input type="text" id="nome" name="nome" required>
+    
+            <label for="versao">Versão:</label>
+            <input type="text" id="versao" name="versao" required>
+    
+            <label for="finalidade">Finalidade:</label>
+            <textarea type="text" id="finalidade" name="finalidade" required></textarea>
+    
+            <label for="info">Principais Informações:</label>
+            <textarea id="info" name="info"  required></textarea>
+    
+            <label for="func">Funcionalidades:</label>
+            <textarea id="func" name="func"  required></textarea>
+    
+            <label for="acessaWeb">Acessa via Web?</label>
+            <input type="radio" id="simAcessaWeb" name="simAcessaWeb" value="Sim">Sim
+            <input type="radio" id="naoAcessaWeb" name="naoAcessaWeb" value="Não">Não
+            <br>
+            <label for="informacaoSigilosa">Possui Informação Sigilosa?</label>
+            <input type="radio" id="simInfoSigilosa" name="simInfoSigilosa" value="Sim" onclick="mostrarCampoSigiloso()">Sim
+            <input type="radio" id="naoInfoSigilosa" name="naoInfoSigilosa" value="Não">Não
+            <br>
+            <div id="campoInfoSigilosa">
+                <label for="qualInfoSigilosa">Qual Informação Sigilosa?</label>
+                <input type="text" id="qualInfoSigilosa" name="qualInfoSigilosa">
+            </div>
+            <input type="submit" id="btnsalvar" value="Cadastrar">
+        </form>
+    </div>
+</div>
+<script>
+    function mostrarCampoSigiloso() {
+        const campoInfoSigilosa = document.getElementById("campoInfoSigilosa")
+        const qualInfoSigilosa = document.getElementById("qualInfoSigilosa")
+        const simInfoSigilosa = document.getElementById("simInfoSigilosa")
+
+        if (simInfoSigilosa.checked) {
+            campoInfoSigilosa.style.display = "block"
+            qualInfoSigilosa.required = true
+        }}
+    function ocultarCampoSigiloso() {
+        const campoInfoSigilosa = document.getElementById("campoInfoSigilosa")
+        const qualInfoSigilosa = document.getElementById("qualInfoSigilosa")
+        const naoInfoSigilosa = document.getElementById("naoInfoSigilosa")
+        if (naoInfoSigilosa.checked) {
+            campoInfoSigilosa.style.display = "none"
+            qualInfoSigilosa.required = false
+            qualInfoSigilosa.value = ""
+        }}
+    document.getElementById("simInfoSigilosa").addEventListener("click", mostrarCampoSigiloso)
+    document.getElementById("naoInfoSigilosa").addEventListener("click", ocultarCampoSigiloso)
+</script>
+    <script src="PARTE05.js"></script>
+</body>
+</html>
